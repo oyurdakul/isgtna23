@@ -1,4 +1,4 @@
-# The online companion to the paper "" submitted to the ISGT #
+# The online companion to the paper "Predictive Prescription of Unit Commitment Decisions Under Net Load Uncertainty" submitted to the IEEE PES ISGT NA 2023 #
 
 This repository contains 
 1. the dataset used in the simulation studies
