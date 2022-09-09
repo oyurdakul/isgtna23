@@ -23,4 +23,7 @@ To capture the influence of wind speed on wind power generation, we study the sp
 2. San Gorgonio
 3. Shiloh
 
-# 2. Dataset #
+The map below depicts the locations of the weather stations from which we utilize temperature, GHI, and wind speed measurements
+
+# 2. Source code #
+We provide the source code for training the RF model in and the source code for solving the UC instances in.
