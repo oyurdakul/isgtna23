@@ -6,7 +6,7 @@ This repository contains
 
 # 1. Dataset #
 
-The data for the experiments is organized in JSON file format as per the input file format of the UnitCommitment.jl package. We use the net load measurements recorded in the California ISO system to construct the net load data for the experiments. As covariates, we use 24 lagged realizations of net load, as well as the 24 lagged realizations of the daily, weekly, and monthly moving average of net load. We also define categorical variables to indicate whether a day falls on a weekend and on a public holiday and use one-hot encoding for their representation. Further, we assess the population and population density of the counties of California and use temperature measurements recorded in the following counties
+The data for the experiments is organized in JSON file format as per the input file format of the UnitCommitment.jl package. The data for the generators is taken from the IEEE 14-bus test system. We use the net load measurements recorded in the California ISO system on June 1, 2018--August 31, 2019 to construct the net load data for the experiments. As covariates, we use 24 lagged realizations of net load, as well as the 24 lagged realizations of the daily, weekly, and monthly moving average of net load. We also define categorical variables to indicate whether a day falls on a weekend and on a public holiday and use one-hot encoding for their representation. Further, we assess the population and population density of the counties of California and use temperature measurements recorded in the following counties
 1. Los Angeles
 2. San Diego
 3. Concord
@@ -22,7 +22,5 @@ To capture the influence of wind speed on wind power generation, we study the sp
 1. Alta
 2. San Gorgonio
 3. Shiloh
-
-The data for the generators is taken from the IEEE 14-bus test system.       
 
 # 2. Dataset #
