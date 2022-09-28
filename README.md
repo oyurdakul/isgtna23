@@ -27,5 +27,5 @@ The map below depicts the locations of the weather stations from which we utiliz
 ![locations_ca](https://user-images.githubusercontent.com/65395490/192755247-df5afefb-0c6f-4ca2-a94a-689e5d51e870.png)
 
 # 2. Source code #
-We provide the source code for training the RF model in and the source code for solving the UC instances in. Note that the source code utilizes a modified version of theUnitCommitment.jl[^1] package, where the deterministic formulation is extended to the two-stage stochastic optimization setting. The utilized version of the UnitCommitment.jl package will be made available in future releases of the package.  
+We provide the source code for training the RF model in and the source code for solving the UC instances in. Note that the source code utilizes a modified version of the [UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl)[^1] package, where the deterministic formulation is extended to the two-stage stochastic optimization setting. The utilized version of the UnitCommitment.jl package will be made available in future releases of the package.  
 [^1]: Alinson S. Xavier, Aleksandr M. Kazachkov, Ogün Yurdakul, Feng Qiu. "UnitCommitment.jl: A Julia/JuMP Optimization Package for Security-Constrained Unit Commitment (Version 0.3)". Zenodo (2022). DOI: 10.5281/zenodo.4269874.
