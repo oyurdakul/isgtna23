@@ -24,6 +24,7 @@ To capture the influence of wind speed on wind power generation, we study the sp
 3. Shiloh
 
 The map below depicts the locations of the weather stations from which we utilize temperature, GHI, and wind speed measurements
+![locations_ca](https://user-images.githubusercontent.com/65395490/192755247-df5afefb-0c6f-4ca2-a94a-689e5d51e870.png)
 
 # 2. Source code #
 We provide the source code for training the RF model in and the source code for solving the UC instances in.
