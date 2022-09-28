@@ -6,7 +6,7 @@ This repository contains
 
 # 1. Dataset #
 
-The data for the experiments is organized in JSON file format as per the input file format of the UnitCommitment.jl package. The data for the generators is taken from the IEEE 14-bus test system. We use the net load measurements recorded in the California ISO system on June 1, 2018--August 31, 2019 to construct the net load data for the experiments. As covariates, we use 24 lagged realizations of net load, as well as the 24 lagged realizations of the daily, weekly, and monthly moving average of net load. We also define categorical variables to indicate whether a day falls on a weekend and on a public holiday and use one-hot encoding for their representation. Further, we assess the population and population density of the counties of California and use temperature measurements recorded in the following counties
+The [data](https://github.com/oyurdakul/isgtna23/tree/main/data/caiso.json) for the Unit Commitment (UC) instances is organized in JSON file format as per the input file format of the [UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl)[^1] package. The data for the generators is taken from the IEEE 14-bus test system. We use the net load measurements recorded in the California ISO system on June 1, 2018–August 31, 2019 to construct the net load data for the experiments. As covariates, we use 24 lagged realizations of net load, as well as the 24 lagged realizations of the daily, weekly, and monthly moving average of net load. We also define categorical variables to indicate whether a day falls on a weekend and on a public holiday and use one-hot encoding for their representation. Further, we assess the population and population density of the counties of California and use temperature measurements recorded in the following counties
 1. Los Angeles
 2. San Diego
 3. Concord
@@ -26,5 +26,8 @@ To capture the influence of wind speed on wind power generation, we study the sp
 The map below depicts the locations of the weather stations from which we utilize temperature, GHI, and wind speed measurements
 ![locations_ca](https://user-images.githubusercontent.com/65395490/192755247-df5afefb-0c6f-4ca2-a94a-689e5d51e870.png)
 
+We use the abovementioned net load and covariate data to construct the [dataset](https://github.com/oyurdakul/isgtna23/tree/main/data/caiso) used for training the random forest (RF) model and validating and testing the proposed predictive prescription framework. 
+
 # 2. Source code #
-We provide the source code for training the RF model in and the source code for solving the UC instances in.
+We provide the [source code](https://github.com/oyurdakul/isgtna23/tree/main/rf) for training the RF model and selecting the covariates and the source code [source code](https://github.com/oyurdakul/isgtna23/tree/compute.jl) for solving the UC instances. Note that the source code utilizes a modified version of the [UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl) package, where the deterministic formulation is extended to the two-stage stochastic optimization setting. The utilized version of the [UnitCommitment.jl](https://github.com/ANL-CEEESA/UnitCommitment.jl) package will be made available in future releases of the package.  
+[^1]: Alinson S. Xavier, Aleksandr M. Kazachkov, Ogün Yurdakul, Feng Qiu. "UnitCommitment.jl: A Julia/JuMP Optimization Package for Security-Constrained Unit Commitment (Version 0.3)". Zenodo (2022). DOI: 10.5281/zenodo.4269874.
